@@ -1,7 +1,7 @@
 /* bits.h contains function declarations for use in bits.c */
-#infdef BITS_H
+#ifndef BITS_H
 #define BITS_H
-#inlcude <stdint.h>
+#include <stdint.h>
 
 /*Prints the lowest width bits of x, most signif bit first, in groups of four seperated by a space. print_binary(0x2C, 8) prints 0010 110.*/
 void print_binary(uint32_t word, int pos, int width);
