@@ -45,19 +45,19 @@ int main(){
     failures += ucheck(set_field(0xFFFF, 1, 8, 0x00), 0xFE01, "set_field mid field");
 
     status_t s = status_unpack(0x1631);
-failures += check(s.HEAT, 1, "status_unpack 0x1631 HEAT");
-failures += check(s.SETPOINT, 22, "status_unpack 0x1631 SETPOINT");
-failures += ucheck(s.MODE, 3, "status_unpack 0x1631 MODE");
+    failures += check(s.HEAT, 1, "status_unpack 0x1631 HEAT");
+    failures += check(s.SETPOINT, 22, "status_unpack 0x1631 SETPOINT");
+    failures += ucheck(s.MODE, 3, "status_unpack 0x1631 MODE");
 
-status_t s2 = status_unpack(0x0000);
-failures += check(s2.HEAT, 0, "status_unpack 0x0000 HEAT");
-failures += check(s2.SETPOINT, 0, "status_unpack 0x0000 SETPOINT");
-failures += ucheck(s2.MODE, 0, "status_unpack 0x0000 MODE");
+    status_t s2 = status_unpack(0x0000);
+    failures += check(s2.HEAT, 0, "status_unpack 0x0000 HEAT");
+    failures += check(s2.SETPOINT, 0, "status_unpack 0x0000 SETPOINT");
+    failures += ucheck(s2.MODE, 0, "status_unpack 0x0000 MODE");
 
-status_t s3 = status_unpack(0x0011);
-failures += check(s3.HEAT, 1, "status_unpack 0x0011 HEAT");
-failures += check(s3.SETPOINT, 0, "status_unpack 0x0011 SETPOINT");
-failures += ucheck(s3.MODE, 1, "status_unpack 0x0011 MODE");
+    status_t s3 = status_unpack(0x0011);
+    failures += check(s3.HEAT, 1, "status_unpack 0x0011 HEAT");
+    failures += check(s3.SETPOINT, 0, "status_unpack 0x0011 SETPOINT");
+    failures += ucheck(s3.MODE, 1, "status_unpack 0x0011 MODE");
 
     printf("%d tests failed\n", failures);
     return failures;
