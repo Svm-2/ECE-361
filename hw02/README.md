@@ -17,6 +17,7 @@ PASS  regression edge.txt, threshold 25
 ```
 
 Below is an ASCII art diagram of how my program works where main calls the other functions residing in the other .c files.
+```
         +--------+
         |  main  |
         +--------+
@@ -25,3 +26,4 @@ Below is an ASCII art diagram of how my program works where main calls the other
 +--------+ +-------+ +-----------+
 |reading | | stats | | histogram |
 +--------+ +-------+ +-----------+
+```
