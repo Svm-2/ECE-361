@@ -31,7 +31,7 @@ void stats_longest_run_above(const float a[], int n, float threshold, int *start
         if (a[i] > threshold) {
             if (run == 0)
                 start = i;
-            run++;
+                run++;
             if (run > best) {
                 best = run;
                 best_start = start;
