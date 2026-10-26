@@ -1,0 +1,13 @@
+# Data file with 9 name lines, two of which are too long and rejected
+# and Austin is repeated twice which means 6 names will be accepted
+
+Bob
+Austin
+Henry
+Gabe
+Evan
+
+Lauren
+Henry Charles Girou
+Michael Armstrong Salvador
+Austin
