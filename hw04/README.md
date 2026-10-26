@@ -40,7 +40,7 @@ names: 6, lines skipped: 2
 
 ```
 
-Opaque types are great for hiding details of a data structure from a user by declaring a struct without a body in the header and defining it in the .c file. This type lets the compiler stop callers from reaching inside. When I added `printf("%d\n", t->n);`, the following error was printed in the terminal. When the line was removed, the program compiled and ran as normal. 
+Opaque types are great for hiding details of a data structure from a user by declaring a struct without a body in the header and defining it in the .c file. This type lets the compiler stop callers from reaching inside. When I added `printf("%d\n", t->n);` to events.c, the following error was printed in the terminal. When the line was removed, the program compiled and ran as normal. 
 ```
 gcc -std=c11 -Wall -Wextra -I. -c events.c -o events.o
 events.c:16:21: error: incomplete definition of type 'tally_t' (aka 'struct tally')
